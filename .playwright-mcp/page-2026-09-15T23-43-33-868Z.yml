@@ -1,0 +1,85 @@
+- generic [ref=f6e3]:
+  - banner [ref=f6e4]:
+    - generic [ref=f6e5]:
+      - link "顺德 Shunde Tutor" [ref=f6e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f6e7]: 顺德
+        - generic [ref=f6e8]: Shunde Tutor
+      - navigation [ref=f6e9]:
+        - link "Home" [ref=f6e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=f6e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=f6e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f6e13]:
+        - generic [ref=f6e14]:
+          - button "RU" [ref=f6e15] [cursor=pointer]
+          - button "EN" [ref=f6e16] [cursor=pointer]
+          - button "中文" [ref=f6e17] [cursor=pointer]
+        - button "Teacher ✓" [ref=f6e19] [cursor=pointer]
+  - main [ref=f6e20]:
+    - generic [ref=f6e21]:
+      - generic [ref=f6e22]:
+        - heading "Documents" [level=1] [ref=f6e23]
+        - textbox "Filter by title" [ref=f6e24]
+        - button "↻" [ref=f6e25] [cursor=pointer]
+      - generic [ref=f6e26]:
+        - heading "Upload document" [level=2] [ref=f6e27]
+        - paragraph [ref=f6e28]: PDF, DOCX, PPTX, XLSX, EPUB, ODT, RTF, HTML, TXT, images…
+        - generic [ref=f6e29]:
+          - button "Choose File" [ref=f6e30]
+          - textbox "Title (optional)" [ref=f6e31]
+          - button "Upload document" [disabled] [ref=f6e32]
+        - generic [ref=f6e33]:
+          - generic [ref=f6e34]:
+            - checkbox "Run AI markup right away" [checked] [ref=f6e35]
+            - text: Run AI markup right away
+          - generic [ref=f6e36]:
+            - button "Quick" [ref=f6e37] [cursor=pointer]
+            - button "Deep" [ref=f6e38] [cursor=pointer]
+      - list [ref=f6e40]:
+        - listitem [ref=f6e41]:
+          - generic [ref=f6e42]:
+            - link "Mencius and the Analects shunde_e2e.txt" [ref=f6e43] [cursor=pointer]:
+              - /url: /documents/doc_475356b37492
+              - generic [ref=f6e44]: Mencius and the Analects
+              - generic [ref=f6e45]: shunde_e2e.txt
+            - generic [ref=f6e46]: annotated
+          - generic [ref=f6e47]:
+            - generic [ref=f6e48]: zh-classical
+            - generic [ref=f6e49]: classical
+            - generic [ref=f6e50]: "Characters: 117"
+            - generic [ref=f6e51]: "Markup: 3"
+          - generic [ref=f6e52]:
+            - link "Open" [ref=f6e53] [cursor=pointer]:
+              - /url: /documents/doc_475356b37492
+            - button "Quick" [ref=f6e54] [cursor=pointer]
+            - button "Deep" [ref=f6e55] [cursor=pointer]
+            - link "MD" [ref=f6e56] [cursor=pointer]:
+              - /url: /api/documents/doc_475356b37492/export
+            - button "Delete" [ref=f6e57] [cursor=pointer]
+        - listitem [ref=f6e58]:
+          - generic [ref=f6e59]:
+            - link "论语 学而 wenyan.txt" [ref=f6e60] [cursor=pointer]:
+              - /url: /documents/doc_70dda3cb93fc
+              - generic [ref=f6e61]: 论语 学而
+              - generic [ref=f6e62]: wenyan.txt
+            - generic [ref=f6e63]: annotated
+          - generic [ref=f6e64]:
+            - generic [ref=f6e65]: zh-classical
+            - generic [ref=f6e66]: classical
+            - generic [ref=f6e67]: "Characters: 325"
+            - generic [ref=f6e68]: "Markup: 32"
+          - generic [ref=f6e69]:
+            - link "Open" [ref=f6e70] [cursor=pointer]:
+              - /url: /documents/doc_70dda3cb93fc
+            - button "Quick" [ref=f6e71] [cursor=pointer]
+            - button "Deep" [ref=f6e72] [cursor=pointer]
+            - link "MD" [ref=f6e73] [cursor=pointer]:
+              - /url: /api/documents/doc_70dda3cb93fc/export
+            - button "Delete" [ref=f6e74] [cursor=pointer]
+  - contentinfo [ref=f6e75]:
+    - generic [ref=f6e76]:
+      - text: Shunde Tutor · FastAPI + React · works offline in degraded mode
+      - generic [ref=f6e77]: "· LLM: deepseek-v4-pro · search: wikipedia, duckduckgo, mojeek, bing_html"

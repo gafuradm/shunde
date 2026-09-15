@@ -1,0 +1,149 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link "顺德 Shunde Tutor" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e7]: 顺德
+        - generic [ref=f1e8]: Shunde Tutor
+      - navigation [ref=f1e9]:
+        - link "Home" [ref=f1e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=f1e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=f1e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f1e13]:
+        - generic [ref=f1e14]: degraded
+        - generic [ref=f1e15]:
+          - button "RU" [ref=f1e16] [cursor=pointer]
+          - button "EN" [ref=f1e17] [cursor=pointer]
+          - button "中文" [ref=f1e18] [cursor=pointer]
+        - button "Teacher ✓" [ref=f1e20] [cursor=pointer]
+  - main [ref=f1e21]:
+    - generic [ref=f1e22]:
+      - generic [ref=f1e23]:
+        - heading "Lectures" [level=1] [ref=f1e24]
+        - generic [ref=f1e25]: Students join by code or link, hear the teacher and read the translation.
+        - button "↻" [ref=f1e26] [cursor=pointer]
+      - generic [ref=f1e27]:
+        - heading "Create a lecture" [level=2] [ref=f1e28]
+        - generic [ref=f1e29]:
+          - textbox "Lecture title" [ref=f1e30]
+          - combobox [ref=f1e31]:
+            - 'option "Speech language: zh-CN" [selected]'
+            - 'option "Speech language: zh-classical"'
+            - 'option "Speech language: en"'
+            - 'option "Speech language: ru"'
+            - 'option "Speech language: ja"'
+          - combobox [ref=f1e32]:
+            - 'option "Translate into: en" [selected]'
+            - 'option "Translate into: ru"'
+            - 'option "Translate into: zh-CN"'
+          - combobox [ref=f1e33]:
+            - option "Document (optional)" [selected]
+            - option "论语 学而"
+            - option "论语 学而"
+        - button "Create a lecture" [ref=f1e34] [cursor=pointer]
+      - table [ref=f1e37]:
+        - rowgroup [ref=f1e38]:
+          - row [ref=f1e39]:
+            - columnheader "Lecture title" [ref=f1e40]
+            - columnheader "Code" [ref=f1e41]
+            - columnheader "Speech language → Translate into" [ref=f1e42]
+            - columnheader "Status" [ref=f1e43]
+            - columnheader [ref=f1e44]
+        - rowgroup [ref=f1e45]:
+          - row [ref=f1e46]:
+            - cell "Лунь юй — разбор главы" [ref=f1e47]
+            - cell "ZRDAQD" [ref=f1e48]
+            - cell "zh-classical → en" [ref=f1e49]
+            - cell "live" [ref=f1e50]
+            - cell [ref=f1e51]:
+              - generic [ref=f1e52]:
+                - button "Copy link" [ref=f1e53] [cursor=pointer]
+                - link "Open as student" [ref=f1e54] [cursor=pointer]:
+                  - /url: /live/ZRDAQD
+                - link "Open as teacher" [ref=f1e55] [cursor=pointer]:
+                  - /url: /live/ZRDAQD?role=host
+                - button "End" [ref=f1e56] [cursor=pointer]
+                - link "SRT" [ref=f1e57] [cursor=pointer]:
+                  - /url: /api/lectures/ZRDAQD/export/srt
+                - link "Markdown" [ref=f1e58] [cursor=pointer]:
+                  - /url: /api/lectures/ZRDAQD/export/markdown
+                - button "Delete" [ref=f1e59] [cursor=pointer]
+          - row [ref=f1e60]:
+            - cell "Тест live-перевода" [ref=f1e61]
+            - cell "42V7VC" [ref=f1e62]
+            - cell "zh-CN → en" [ref=f1e63]
+            - cell "live" [ref=f1e64]
+            - cell [ref=f1e65]:
+              - generic [ref=f1e66]:
+                - button "Copy link" [ref=f1e67] [cursor=pointer]
+                - link "Open as student" [ref=f1e68] [cursor=pointer]:
+                  - /url: /live/42V7VC
+                - link "Open as teacher" [ref=f1e69] [cursor=pointer]:
+                  - /url: /live/42V7VC?role=host
+                - button "End" [ref=f1e70] [cursor=pointer]
+                - link "SRT" [ref=f1e71] [cursor=pointer]:
+                  - /url: /api/lectures/42V7VC/export/srt
+                - link "Markdown" [ref=f1e72] [cursor=pointer]:
+                  - /url: /api/lectures/42V7VC/export/markdown
+                - button "Delete" [ref=f1e73] [cursor=pointer]
+          - row [ref=f1e74]:
+            - 'cell "Лекция 1: Лунь юй" [ref=f1e75]'
+            - cell "SLBG9V" [ref=f1e76]
+            - cell "zh-CN → en" [ref=f1e77]
+            - cell "live" [ref=f1e78]
+            - cell [ref=f1e79]:
+              - generic [ref=f1e80]:
+                - button "Copy link" [ref=f1e81] [cursor=pointer]
+                - link "Open as student" [ref=f1e82] [cursor=pointer]:
+                  - /url: /live/SLBG9V
+                - link "Open as teacher" [ref=f1e83] [cursor=pointer]:
+                  - /url: /live/SLBG9V?role=host
+                - button "End" [ref=f1e84] [cursor=pointer]
+                - link "SRT" [ref=f1e85] [cursor=pointer]:
+                  - /url: /api/lectures/SLBG9V/export/srt
+                - link "Markdown" [ref=f1e86] [cursor=pointer]:
+                  - /url: /api/lectures/SLBG9V/export/markdown
+                - button "Delete" [ref=f1e87] [cursor=pointer]
+          - row [ref=f1e88]:
+            - cell "t" [ref=f1e89]
+            - cell "987DUU" [ref=f1e90]
+            - cell "zh → en" [ref=f1e91]
+            - cell "draft" [ref=f1e92]
+            - cell [ref=f1e93]:
+              - generic [ref=f1e94]:
+                - button "Copy link" [ref=f1e95] [cursor=pointer]
+                - link "Open as student" [ref=f1e96] [cursor=pointer]:
+                  - /url: /live/987DUU
+                - link "Open as teacher" [ref=f1e97] [cursor=pointer]:
+                  - /url: /live/987DUU?role=host
+                - button "Start" [ref=f1e98] [cursor=pointer]
+                - link "SRT" [ref=f1e99] [cursor=pointer]:
+                  - /url: /api/lectures/987DUU/export/srt
+                - link "Markdown" [ref=f1e100] [cursor=pointer]:
+                  - /url: /api/lectures/987DUU/export/markdown
+                - button "Delete" [ref=f1e101] [cursor=pointer]
+          - row [ref=f1e102]:
+            - cell "test" [ref=f1e103]
+            - cell "JVVFV6" [ref=f1e104]
+            - cell "zh-CN → en" [ref=f1e105]
+            - cell "draft" [ref=f1e106]
+            - cell [ref=f1e107]:
+              - generic [ref=f1e108]:
+                - button "Copy link" [ref=f1e109] [cursor=pointer]
+                - link "Open as student" [ref=f1e110] [cursor=pointer]:
+                  - /url: /live/JVVFV6
+                - link "Open as teacher" [ref=f1e111] [cursor=pointer]:
+                  - /url: /live/JVVFV6?role=host
+                - button "Start" [ref=f1e112] [cursor=pointer]
+                - link "SRT" [ref=f1e113] [cursor=pointer]:
+                  - /url: /api/lectures/JVVFV6/export/srt
+                - link "Markdown" [ref=f1e114] [cursor=pointer]:
+                  - /url: /api/lectures/JVVFV6/export/markdown
+                - button "Delete" [ref=f1e115] [cursor=pointer]
+  - contentinfo [ref=f1e116]:
+    - generic [ref=f1e117]:
+      - text: Shunde Tutor · FastAPI + React · works offline in degraded mode
+      - generic [ref=f1e118]: "· LLM: off · search: wikipedia, duckduckgo, mojeek, bing_html"

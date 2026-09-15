@@ -1,0 +1,71 @@
+- generic [ref=f4e3]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - link "顺德 Shunde Tutor" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e7]: 顺德
+        - generic [ref=f4e8]: Shunde Tutor
+      - navigation [ref=f4e9]:
+        - link "Главная" [ref=f4e65] [cursor=pointer]:
+          - /url: /
+        - link "Документы" [ref=f4e66] [cursor=pointer]:
+          - /url: /documents
+        - link "Лекции" [ref=f4e67] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f4e13]:
+        - generic [ref=f4e14]:
+          - button "RU" [active] [ref=f4e15] [cursor=pointer]
+          - button "EN" [ref=f4e16] [cursor=pointer]
+          - button "中文" [ref=f4e17] [cursor=pointer]
+        - button "Преподаватель ✓" [ref=f4e68] [cursor=pointer]
+  - main [ref=f4e20]:
+    - generic [ref=f4e21]:
+      - generic [ref=f4e22]:
+        - generic [ref=f4e23]:
+          - generic [ref=f4e24]:
+            - heading "Lecture HFMDA3" [level=1] [ref=f4e25]
+            - generic [ref=f4e26]: черновик
+          - generic [ref=f4e27]:
+            - generic [ref=f4e28]: HFMDA3
+            - generic [ref=f4e29]: Студент
+            - generic [ref=f4e30]: "Студентов: 1"
+            - generic [ref=f4e31]: Подключено
+            - generic [ref=f4e32]: zh-CN → en
+        - generic [ref=f4e33]:
+          - button "Скопировать ссылку" [ref=f4e69] [cursor=pointer]
+          - link "SRT" [ref=f4e35] [cursor=pointer]:
+            - /url: /api/lectures/HFMDA3/export/srt
+          - link "Markdown" [ref=f4e36] [cursor=pointer]:
+            - /url: /api/lectures/HFMDA3/export/markdown
+          - link "Назад" [ref=f4e70] [cursor=pointer]:
+            - /url: /lectures
+      - generic [ref=f4e38]:
+        - generic [ref=f4e39]:
+          - heading "Субтитры" [level=2] [ref=f4e71]
+          - paragraph [ref=f4e43]: Пока никто ничего не сказал
+          - generic [ref=f4e44]:
+            - button "Перевести выделенное" [disabled] [ref=f4e72]
+            - generic [ref=f4e46]:
+              - text: "Перевод:"
+              - combobox "Перевод:" [ref=f4e73]:
+                - option "English" [selected]
+                - option "Russian"
+                - option "中文"
+            - generic [ref=f4e48]: Выделите текст в субтитрах и нажмите «Перевести выделенное»
+        - complementary [ref=f4e49]:
+          - generic [ref=f4e50]:
+            - heading "Аудио-трансляция" [level=2] [ref=f4e74]
+            - generic [ref=f4e53]:
+              - button "Включить аудио" [ref=f4e75] [cursor=pointer]
+              - generic [ref=f4e55]: Ожидаем аудио от преподавателя…
+          - generic [ref=f4e56]:
+            - heading "Мой перевод" [level=2] [ref=f4e76]
+            - paragraph [ref=f4e58]: Выделите текст в субтитрах и нажмите «Перевести выделенное»
+          - generic [ref=f4e59]:
+            - heading "Участники" [level=2] [ref=f4e77]
+            - paragraph [ref=f4e61]: "Студентов: 1 · Преподаватель: 0"
+            - paragraph [ref=f4e62]: Лекция ещё не началась. Дождитесь преподавателя.
+  - contentinfo [ref=f4e63]:
+    - generic [ref=f4e64]:
+      - text: Shunde Tutor · FastAPI + React · работает офлайн в деградированном режиме
+      - generic [ref=f4e78]: "· LLM: deepseek-v4-pro · search: wikipedia, duckduckgo, mojeek, bing_html"

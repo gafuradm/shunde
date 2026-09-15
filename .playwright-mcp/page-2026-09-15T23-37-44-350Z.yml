@@ -1,0 +1,71 @@
+- generic [ref=f4e3]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - link "顺德 Shunde Tutor" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e7]: 顺德
+        - generic [ref=f4e8]: Shunde Tutor
+      - navigation [ref=f4e9]:
+        - link "Home" [ref=f4e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=f4e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=f4e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f4e13]:
+        - generic [ref=f4e14]:
+          - button "RU" [ref=f4e15] [cursor=pointer]
+          - button "EN" [ref=f4e16] [cursor=pointer]
+          - button "中文" [ref=f4e17] [cursor=pointer]
+        - button "Teacher ✓" [ref=f4e19] [cursor=pointer]
+  - main [ref=f4e20]:
+    - generic [ref=f4e21]:
+      - generic [ref=f4e22]:
+        - generic [ref=f4e23]:
+          - generic [ref=f4e24]:
+            - heading "Responsive check" [level=1] [ref=f4e25]
+            - generic [ref=f4e26]: draft
+          - generic [ref=f4e27]:
+            - generic [ref=f4e28]: WBNNQZ
+            - generic [ref=f4e29]: Student
+            - generic [ref=f4e30]: "Students: 0"
+            - generic [ref=f4e31]: Connected
+            - generic [ref=f4e32]: zh-CN → en
+        - generic [ref=f4e33]:
+          - button "Copy link" [ref=f4e34] [cursor=pointer]
+          - link "SRT" [ref=f4e35] [cursor=pointer]:
+            - /url: /api/lectures/WBNNQZ/export/srt
+          - link "Markdown" [ref=f4e36] [cursor=pointer]:
+            - /url: /api/lectures/WBNNQZ/export/markdown
+          - link "Back" [ref=f4e37] [cursor=pointer]:
+            - /url: /lectures
+      - generic [ref=f4e38]:
+        - generic [ref=f4e39]:
+          - heading "Subtitles" [level=2] [ref=f4e41]
+          - paragraph [ref=f4e43]: Nobody has spoken yet
+          - generic [ref=f4e44]:
+            - button "Translate selection" [disabled] [ref=f4e45]
+            - generic [ref=f4e46]:
+              - text: "Translate to:"
+              - combobox "Translate to:" [ref=f4e47]:
+                - option "English" [selected]
+                - option "Russian"
+                - option "中文"
+            - generic [ref=f4e48]: Select text in the subtitles and press “Translate selection”
+        - complementary [ref=f4e49]:
+          - generic [ref=f4e50]:
+            - heading "Audio relay" [level=2] [ref=f4e51]
+            - generic [ref=f4e53]:
+              - button "Turn audio on" [ref=f4e54] [cursor=pointer]
+              - generic [ref=f4e55]: Waiting for audio from the teacher…
+          - generic [ref=f4e56]:
+            - heading "My translation" [level=2] [ref=f4e57]
+            - paragraph [ref=f4e58]: Select text in the subtitles and press “Translate selection”
+          - generic [ref=f4e59]:
+            - heading "Participants" [level=2] [ref=f4e60]
+            - paragraph [ref=f4e61]: "Students: 0 · Teacher: 0"
+            - paragraph [ref=f4e62]: The lecture has not started yet. Wait for the teacher.
+  - contentinfo [ref=f4e63]:
+    - generic [ref=f4e64]:
+      - text: Shunde Tutor · FastAPI + React · works offline in degraded mode
+      - generic [ref=f4e65]: "· LLM: deepseek-v4-pro · search: wikipedia, duckduckgo, mojeek, bing_html"

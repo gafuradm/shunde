@@ -1,0 +1,50 @@
+- generic [ref=f3e3]:
+  - banner [ref=f3e4]:
+    - generic [ref=f3e5]:
+      - link "顺德 Shunde Tutor" [ref=f3e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e7]: 顺德
+        - generic [ref=f3e8]: Shunde Tutor
+      - navigation [ref=f3e9]:
+        - link "Home" [ref=f3e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=f3e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=f3e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f3e13]:
+        - generic [ref=f3e14]:
+          - button "RU" [ref=f3e15] [cursor=pointer]
+          - button "EN" [ref=f3e16] [cursor=pointer]
+          - button "中文" [ref=f3e17] [cursor=pointer]
+        - button "Teacher ✓" [ref=f3e19] [cursor=pointer]
+  - main [ref=f3e20]:
+    - generic [ref=f3e21]:
+      - generic [ref=f3e22]:
+        - heading "Lectures" [level=1] [ref=f3e23]
+        - generic [ref=f3e24]: Students join by code or link, hear the teacher and read the translation.
+        - button "↻" [ref=f3e25] [cursor=pointer]
+      - generic [ref=f3e26]:
+        - heading "Create a lecture" [level=2] [ref=f3e27]
+        - generic [ref=f3e28]:
+          - textbox "Lecture title" [ref=f3e29]
+          - combobox [ref=f3e30]:
+            - 'option "Speech language: zh-CN" [selected]'
+            - 'option "Speech language: zh-classical"'
+            - 'option "Speech language: en"'
+            - 'option "Speech language: ru"'
+            - 'option "Speech language: ja"'
+          - combobox [ref=f3e31]:
+            - 'option "Translate into: en" [selected]'
+            - 'option "Translate into: ru"'
+            - 'option "Translate into: zh-CN"'
+          - combobox [ref=f3e32]:
+            - option "Document (optional)" [selected]
+            - option "Mencius and the Analects"
+            - option "论语 学而"
+        - button "Create a lecture" [ref=f3e33] [cursor=pointer]
+      - generic [ref=f3e34]: No lectures yet
+  - contentinfo [ref=f3e36]:
+    - generic [ref=f3e37]:
+      - text: Shunde Tutor · FastAPI + React · works offline in degraded mode
+      - generic [ref=f3e38]: "· LLM: deepseek-v4-pro · search: wikipedia, duckduckgo, mojeek, bing_html"

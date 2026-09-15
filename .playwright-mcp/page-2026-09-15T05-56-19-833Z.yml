@@ -1,0 +1,158 @@
+- generic [ref=f3e3]:
+  - banner [ref=f3e4]:
+    - generic [ref=f3e5]:
+      - link "顺德 Shunde Tutor" [ref=f3e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e7]: 顺德
+        - generic [ref=f3e8]: Shunde Tutor
+      - navigation [ref=f3e9]:
+        - link "Главная" [ref=f3e10] [cursor=pointer]:
+          - /url: /
+        - link "Документы" [ref=f3e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Лекции" [ref=f3e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f3e13]:
+        - generic [ref=f3e14]: degraded
+        - generic [ref=f3e15]:
+          - button "RU" [ref=f3e16] [cursor=pointer]
+          - button "EN" [ref=f3e17] [cursor=pointer]
+          - button "中文" [ref=f3e18] [cursor=pointer]
+        - button "Преподаватель ✓" [ref=f3e20] [cursor=pointer]
+  - main [ref=f3e21]:
+    - generic [ref=f3e22]:
+      - generic [ref=f3e23]:
+        - link "← К списку документов" [ref=f3e24] [cursor=pointer]:
+          - /url: /documents
+        - heading "论语 学而" [level=1] [ref=f3e25]
+        - generic [ref=f3e26]: zh-classical
+        - generic [ref=f3e27]: вэньянь
+        - generic [ref=f3e28]: annotated
+        - generic [ref=f3e29]:
+          - button "Свернуть панель" [ref=f3e30] [cursor=pointer]
+          - link "Скачать Markdown" [ref=f3e31] [cursor=pointer]:
+            - /url: /api/documents/doc_70dda3cb93fc/export
+      - generic [ref=f3e32]:
+        - generic [ref=f3e33]: "ИИ-разметка:"
+        - button "Быстро" [ref=f3e34] [cursor=pointer]
+        - button "Глубоко" [ref=f3e35] [cursor=pointer]
+        - button "Убрать ИИ-разметку" [ref=f3e36] [cursor=pointer]
+        - generic [ref=f3e38]:
+          - checkbox "Ручная разметка" [ref=f3e39]
+          - text: Ручная разметка
+        - generic [ref=f3e40]: Выделите текст мышью и выберите тип
+      - generic [ref=f3e41]:
+        - generic [ref=f3e42]: 论语·学而 子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？」 曾子曰：「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」 子曰：「温故而知新，可以为师矣。」 The Analects (Lunyu) is one of the Four Books of Confucianism. It was compiled by the disciples of Confucius around the 5th century BCE. Confucius (551–479 BCE) was a Chinese philosopher of the Spring and Autumn period.
+        - complementary [ref=f3e44]:
+          - generic [ref=f3e45]:
+            - generic [ref=f3e46]:
+              - heading "Легенда" [level=2] [ref=f3e47]
+              - generic [ref=f3e48]: 13 / Разметка
+            - generic [ref=f3e49]:
+              - generic [ref=f3e50]: понятие
+              - generic [ref=f3e51]: термин
+              - generic [ref=f3e52]: факт
+              - generic [ref=f3e53]: непонятное
+              - generic [ref=f3e54]: аллюзия
+              - generic [ref=f3e55]: грамматика
+              - generic [ref=f3e56]: важное
+            - list [ref=f3e57]:
+              - listitem [ref=f3e58]:
+                - button "понятие 学而时习 成语" [ref=f3e59] [cursor=pointer]:
+                  - generic [ref=f3e60]:
+                    - generic [ref=f3e61]: понятие
+                    - generic [ref=f3e62]: 学而时习
+                  - generic [ref=f3e63]: 成语
+                - button "✕" [ref=f3e64] [cursor=pointer]
+              - listitem [ref=f3e65]:
+                - button "грамматика 不亦 文言虚词/句式" [ref=f3e66] [cursor=pointer]:
+                  - generic [ref=f3e67]:
+                    - generic [ref=f3e68]: грамматика
+                    - generic [ref=f3e69]: 不亦
+                  - generic [ref=f3e70]: 文言虚词/句式
+                - button "✕" [ref=f3e71] [cursor=pointer]
+              - listitem [ref=f3e72]:
+                - button "грамматика 不亦 文言虚词/句式" [ref=f3e73] [cursor=pointer]:
+                  - generic [ref=f3e74]:
+                    - generic [ref=f3e75]: грамматика
+                    - generic [ref=f3e76]: 不亦
+                  - generic [ref=f3e77]: 文言虚词/句式
+                - button "✕" [ref=f3e78] [cursor=pointer]
+              - listitem [ref=f3e79]:
+                - button "понятие 人不知而 成语" [ref=f3e80] [cursor=pointer]:
+                  - generic [ref=f3e81]:
+                    - generic [ref=f3e82]: понятие
+                    - generic [ref=f3e83]: 人不知而
+                  - generic [ref=f3e84]: 成语
+                - button "✕" [ref=f3e85] [cursor=pointer]
+              - listitem [ref=f3e86]:
+                - button "грамматика 不亦 文言虚词/句式" [ref=f3e87] [cursor=pointer]:
+                  - generic [ref=f3e88]:
+                    - generic [ref=f3e89]: грамматика
+                    - generic [ref=f3e90]: 不亦
+                  - generic [ref=f3e91]: 文言虚词/句式
+                - button "✕" [ref=f3e92] [cursor=pointer]
+              - listitem [ref=f3e93]:
+                - button "термин 「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」 Цитата" [ref=f3e94] [cursor=pointer]:
+                  - generic [ref=f3e95]:
+                    - generic [ref=f3e96]: термин
+                    - generic [ref=f3e97]: 「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」
+                  - generic [ref=f3e98]: Цитата
+                - button "✕" [ref=f3e99] [cursor=pointer]
+              - listitem [ref=f3e100]:
+                - button "термин 「温故而知新，可以为师矣。」 Цитата" [ref=f3e101] [cursor=pointer]:
+                  - generic [ref=f3e102]:
+                    - generic [ref=f3e103]: термин
+                    - generic [ref=f3e104]: 「温故而知新，可以为师矣。」
+                  - generic [ref=f3e105]: Цитата
+                - button "✕" [ref=f3e106] [cursor=pointer]
+              - listitem [ref=f3e107]:
+                - button "термин The Analects Термин/имя" [ref=f3e108] [cursor=pointer]:
+                  - generic [ref=f3e109]:
+                    - generic [ref=f3e110]: термин
+                    - generic [ref=f3e111]: The Analects
+                  - generic [ref=f3e112]: Термин/имя
+                - button "✕" [ref=f3e113] [cursor=pointer]
+              - listitem [ref=f3e114]:
+                - button "термин Lunyu Термин/имя" [ref=f3e115] [cursor=pointer]:
+                  - generic [ref=f3e116]:
+                    - generic [ref=f3e117]: термин
+                    - generic [ref=f3e118]: Lunyu
+                  - generic [ref=f3e119]: Термин/имя
+                - button "✕" [ref=f3e120] [cursor=pointer]
+              - listitem [ref=f3e121]:
+                - button "термин Four Books Термин/имя" [ref=f3e122] [cursor=pointer]:
+                  - generic [ref=f3e123]:
+                    - generic [ref=f3e124]: термин
+                    - generic [ref=f3e125]: Four Books
+                  - generic [ref=f3e126]: Термин/имя
+                - button "✕" [ref=f3e127] [cursor=pointer]
+              - listitem [ref=f3e128]:
+                - button "термин Confucianism Термин/имя" [ref=f3e129] [cursor=pointer]:
+                  - generic [ref=f3e130]:
+                    - generic [ref=f3e131]: термин
+                    - generic [ref=f3e132]: Confucianism
+                  - generic [ref=f3e133]: Термин/имя
+                - button "✕" [ref=f3e134] [cursor=pointer]
+              - listitem [ref=f3e135]:
+                - button "термин Confucius Термин/имя" [ref=f3e136] [cursor=pointer]:
+                  - generic [ref=f3e137]:
+                    - generic [ref=f3e138]: термин
+                    - generic [ref=f3e139]: Confucius
+                  - generic [ref=f3e140]: Термин/имя
+                - button "✕" [ref=f3e141] [cursor=pointer]
+              - listitem [ref=f3e142]:
+                - button "факт 479 BC Дата/год" [ref=f3e143] [cursor=pointer]:
+                  - generic [ref=f3e144]:
+                    - generic [ref=f3e145]: факт
+                    - generic [ref=f3e146]: 479 BC
+                  - generic [ref=f3e147]: Дата/год
+                - button "✕" [ref=f3e148] [cursor=pointer]
+          - generic [ref=f3e149]:
+            - heading "Мои заметки" [level=2] [ref=f3e150]
+            - paragraph [ref=f3e151]: Заметки сохраняются локально в браузере
+            - textbox [ref=f3e152]
+  - contentinfo [ref=f3e153]:
+    - generic [ref=f3e154]:
+      - text: Shunde Tutor · FastAPI + React · работает офлайн в деградированном режиме
+      - generic [ref=f3e155]: "· LLM: off · search: wikipedia, duckduckgo, mojeek, bing_html"

@@ -1,0 +1,62 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link "顺德 Shunde Tutor" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e7]: 顺德
+        - generic [ref=f1e8]: Shunde Tutor
+      - navigation [ref=f1e9]:
+        - link "Главная" [ref=f1e10] [cursor=pointer]:
+          - /url: /
+        - link "Документы" [ref=f1e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Лекции" [ref=f1e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f1e13]:
+        - generic [ref=f1e14]: degraded
+        - generic [ref=f1e15]:
+          - button "RU" [ref=f1e16] [cursor=pointer]
+          - button "EN" [ref=f1e17] [cursor=pointer]
+          - button "中文" [ref=f1e18] [cursor=pointer]
+        - button "Преподаватель" [ref=f1e20] [cursor=pointer]
+  - main [ref=f1e21]:
+    - generic [ref=f1e22]:
+      - generic [ref=f1e24]:
+        - generic [ref=f1e25]:
+          - heading "Учим китайский (включая вэньянь) и английский" [level=1] [ref=f1e26]
+          - paragraph [ref=f1e27]: Загрузите документ любого формата — ИИ сам подчеркнёт важные понятия, факты и непонятные места. Наведите курсор на подчёркнутый фрагмент, и ИИ найдёт объяснение в интернете. На живой лекции речь преподавателя мгновенно превращается в субтитры и переводится на английский.
+          - generic [ref=f1e28]:
+            - link "Перейти к документам" [ref=f1e29] [cursor=pointer]:
+              - /url: /documents
+            - link "Начать лекцию" [ref=f1e30] [cursor=pointer]:
+              - /url: /lectures
+          - paragraph [ref=f1e31]: "Без ключа LLM приложение продолжает работать в деградированном режиме: эвристическая разметка, Wikipedia и бесплатный перевод."
+        - generic [ref=f1e32]:
+          - generic [ref=f1e33]:
+            - heading "Подключиться к лекции" [level=2] [ref=f1e34]
+            - paragraph [ref=f1e35]: Введите код комнаты, который назвал преподаватель.
+            - textbox "AB12CD" [ref=f1e36]
+            - button "Войти" [disabled] [ref=f1e37]
+          - generic [ref=f1e38]:
+            - heading "Режим преподавателя" [level=2] [ref=f1e39]
+            - paragraph [ref=f1e40]: Введите токен — откроются загрузка файлов, ИИ-разметка, ручное редактирование и запуск лекций.
+            - generic [ref=f1e41]:
+              - generic [ref=f1e42]: token —
+              - generic [ref=f1e43]: Нужен для загрузки, ИИ-разметки и запуска лекций
+      - generic [ref=f1e44]:
+        - generic [ref=f1e45]:
+          - generic [ref=f1e46]: 📚
+          - generic [ref=f1e47]: Загрузить документ
+          - generic [ref=f1e48]: PDF, DOCX, PPTX, XLSX, EPUB, ODT, RTF, HTML, TXT, изображения…
+        - generic [ref=f1e49]:
+          - generic [ref=f1e50]: 🖍️
+          - generic [ref=f1e51]: ИИ-разметка
+          - generic [ref=f1e52]: Наведите курсор на подчёркнутый фрагмент
+        - generic [ref=f1e53]:
+          - generic [ref=f1e54]: 🎧
+          - generic [ref=f1e55]: Перевод
+          - generic [ref=f1e56]: Студенты заходят по коду или ссылке, слышат преподавателя и читают перевод.
+  - contentinfo [ref=f1e57]:
+    - generic [ref=f1e58]:
+      - text: Shunde Tutor · FastAPI + React · работает офлайн в деградированном режиме
+      - generic [ref=f1e59]: "· LLM: off · search: wikipedia, duckduckgo, mojeek, bing_html"

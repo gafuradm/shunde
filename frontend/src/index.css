@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-50 text-ink-900 antialiased;
+}
+
+/* --------------------------------------------------------------- разметка */
+.doc-text {
+  @apply whitespace-pre-wrap break-words font-han text-[17px] leading-[1.9] text-ink-900;
+}
+
+.mk {
+  @apply cursor-help rounded px-[1px] transition-colors;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.mk-concept {
+  @apply bg-amber-100/70 decoration-amber-500 hover:bg-amber-200;
+}
+.mk-term {
+  @apply bg-sky-100/70 decoration-sky-500 hover:bg-sky-200;
+}
+.mk-fact {
+  @apply bg-emerald-100/70 decoration-emerald-500 hover:bg-emerald-200;
+}
+.mk-unclear {
+  @apply bg-rose-100/70 decoration-rose-500 hover:bg-rose-200;
+}
+.mk-allusion {
+  @apply bg-violet-100/70 decoration-violet-500 hover:bg-violet-200;
+}
+.mk-grammar {
+  @apply bg-cyan-100/70 decoration-cyan-500 hover:bg-cyan-200;
+}
+.mk-emphasis {
+  @apply bg-orange-100/70 decoration-orange-500 hover:bg-orange-200;
+}
+
+.mk-active {
+  @apply ring-2 ring-seal-500/60 ring-offset-1;
+}
+
+.mk-manual {
+  @apply bg-slate-200/70 decoration-slate-500 hover:bg-slate-300;
+}
+
+/* ------------------------------------------------------------------ прочее */
+.card {
+  @apply rounded-xl border border-ink-200/70 bg-white shadow-sm;
+}
+
+.btn {
+  @apply inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition
+    disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply btn bg-seal-500 text-white hover:bg-seal-600;
+}
+
+.btn-ghost {
+  @apply btn border border-ink-200 bg-white text-ink-800 hover:bg-ink-100;
+}
+
+.btn-quiet {
+  @apply btn text-ink-600 hover:bg-ink-100;
+}
+
+.input {
+  @apply w-full rounded-lg border border-ink-200 bg-white px-3 py-2 text-sm
+    outline-none focus:border-seal-400 focus:ring-2 focus:ring-seal-400/30;
+}
+
+.chip {
+  @apply rounded-full border border-ink-200 bg-white px-2.5 py-1 text-xs font-medium text-ink-600;
+}
+
+.badge {
+  @apply rounded-full px-2 py-[2px] text-[11px] font-semibold uppercase tracking-wide;
+}
+
+.sub-line {
+  @apply border-b border-ink-100 px-3 py-2 last:border-b-0;
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+}
+.scroll-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-ink-200;
+}
+
+/* --------------------------- адаптив: планшеты и телефоны (<1024px, тач-ввод) */
+@media (max-width: 1023px) {
+  /* высота кликабельных элементов — не меньше 40px под палец */
+  .btn,
+  .btn-primary,
+  .btn-ghost,
+  .btn-quiet {
+    min-height: 40px;
+  }
+
+  button.chip,
+  a.chip {
+    min-height: 34px;
+  }
+
+  .input {
+    min-height: 40px;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* --------------------------------------------- адаптив: телефоны (<640px) */
+@media (max-width: 639px) {
+  /* на телефоне добавляем и горизонтальные отступы */
+  .btn,
+  .btn-primary,
+  .btn-ghost,
+  .btn-quiet {
+    @apply px-3 py-2;
+  }
+
+  button.chip {
+    @apply px-3;
+  }
+
+  /* чуть больше кегль текста документа при чтении с телефона */
+  .doc-text {
+    @apply text-[18px] leading-[1.95];
+  }
+}

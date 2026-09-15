@@ -1,0 +1,158 @@
+- generic [ref=f4e3]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - link "顺德 Shunde Tutor" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e7]: 顺德
+        - generic [ref=f4e8]: Shunde Tutor
+      - navigation [ref=f4e9]:
+        - link "Home" [ref=f4e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=f4e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=f4e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f4e13]:
+        - generic [ref=f4e14]: degraded
+        - generic [ref=f4e15]:
+          - button "RU" [ref=f4e16] [cursor=pointer]
+          - button "EN" [ref=f4e17] [cursor=pointer]
+          - button "中文" [ref=f4e18] [cursor=pointer]
+        - button "Teacher ✓" [ref=f4e20] [cursor=pointer]
+  - main [ref=f4e21]:
+    - generic [ref=f4e22]:
+      - generic [ref=f4e23]:
+        - link "← Back to documents" [ref=f4e24] [cursor=pointer]:
+          - /url: /documents
+        - heading "论语 学而" [level=1] [ref=f4e25]
+        - generic [ref=f4e26]: zh-classical
+        - generic [ref=f4e27]: classical
+        - generic [ref=f4e28]: annotated
+        - generic [ref=f4e29]:
+          - button "Collapse panel" [ref=f4e30] [cursor=pointer]
+          - link "Download Markdown" [ref=f4e31] [cursor=pointer]:
+            - /url: /api/documents/doc_70dda3cb93fc/export
+      - generic [ref=f4e32]:
+        - generic [ref=f4e33]: "AI markup:"
+        - button "Quick" [ref=f4e34] [cursor=pointer]
+        - button "Deep" [ref=f4e35] [cursor=pointer]
+        - button "Clear AI markup" [ref=f4e36] [cursor=pointer]
+        - generic [ref=f4e38]:
+          - checkbox "Manual markup" [ref=f4e39]
+          - text: Manual markup
+        - generic [ref=f4e40]: Select text with the mouse and pick a kind
+      - generic [ref=f4e41]:
+        - generic [ref=f4e42]: 论语·学而 子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？」 曾子曰：「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」 子曰：「温故而知新，可以为师矣。」 The Analects (Lunyu) is one of the Four Books of Confucianism. It was compiled by the disciples of Confucius around the 5th century BCE. Confucius (551–479 BCE) was a Chinese philosopher of the Spring and Autumn period.
+        - complementary [ref=f4e44]:
+          - generic [ref=f4e45]:
+            - generic [ref=f4e46]:
+              - heading "Legend" [level=2] [ref=f4e47]
+              - generic [ref=f4e48]: 13 / Markup
+            - generic [ref=f4e49]:
+              - generic [ref=f4e50]: concept
+              - generic [ref=f4e51]: term
+              - generic [ref=f4e52]: fact
+              - generic [ref=f4e53]: unclear
+              - generic [ref=f4e54]: allusion
+              - generic [ref=f4e55]: grammar
+              - generic [ref=f4e56]: emphasis
+            - list [ref=f4e57]:
+              - listitem [ref=f4e58]:
+                - button "concept 学而时习 成语" [ref=f4e59] [cursor=pointer]:
+                  - generic [ref=f4e60]:
+                    - generic [ref=f4e61]: concept
+                    - generic [ref=f4e62]: 学而时习
+                  - generic [ref=f4e63]: 成语
+                - button "✕" [ref=f4e64] [cursor=pointer]
+              - listitem [ref=f4e65]:
+                - button "grammar 不亦 文言虚词/句式" [ref=f4e66] [cursor=pointer]:
+                  - generic [ref=f4e67]:
+                    - generic [ref=f4e68]: grammar
+                    - generic [ref=f4e69]: 不亦
+                  - generic [ref=f4e70]: 文言虚词/句式
+                - button "✕" [ref=f4e71] [cursor=pointer]
+              - listitem [ref=f4e72]:
+                - button "grammar 不亦 文言虚词/句式" [ref=f4e73] [cursor=pointer]:
+                  - generic [ref=f4e74]:
+                    - generic [ref=f4e75]: grammar
+                    - generic [ref=f4e76]: 不亦
+                  - generic [ref=f4e77]: 文言虚词/句式
+                - button "✕" [ref=f4e78] [cursor=pointer]
+              - listitem [ref=f4e79]:
+                - button "concept 人不知而 成语" [ref=f4e80] [cursor=pointer]:
+                  - generic [ref=f4e81]:
+                    - generic [ref=f4e82]: concept
+                    - generic [ref=f4e83]: 人不知而
+                  - generic [ref=f4e84]: 成语
+                - button "✕" [ref=f4e85] [cursor=pointer]
+              - listitem [ref=f4e86]:
+                - button "grammar 不亦 文言虚词/句式" [ref=f4e87] [cursor=pointer]:
+                  - generic [ref=f4e88]:
+                    - generic [ref=f4e89]: grammar
+                    - generic [ref=f4e90]: 不亦
+                  - generic [ref=f4e91]: 文言虚词/句式
+                - button "✕" [ref=f4e92] [cursor=pointer]
+              - listitem [ref=f4e93]:
+                - button "term 「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」 Цитата" [ref=f4e94] [cursor=pointer]:
+                  - generic [ref=f4e95]:
+                    - generic [ref=f4e96]: term
+                    - generic [ref=f4e97]: 「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」
+                  - generic [ref=f4e98]: Цитата
+                - button "✕" [ref=f4e99] [cursor=pointer]
+              - listitem [ref=f4e100]:
+                - button "term 「温故而知新，可以为师矣。」 Цитата" [ref=f4e101] [cursor=pointer]:
+                  - generic [ref=f4e102]:
+                    - generic [ref=f4e103]: term
+                    - generic [ref=f4e104]: 「温故而知新，可以为师矣。」
+                  - generic [ref=f4e105]: Цитата
+                - button "✕" [ref=f4e106] [cursor=pointer]
+              - listitem [ref=f4e107]:
+                - button "term The Analects Термин/имя" [ref=f4e108] [cursor=pointer]:
+                  - generic [ref=f4e109]:
+                    - generic [ref=f4e110]: term
+                    - generic [ref=f4e111]: The Analects
+                  - generic [ref=f4e112]: Термин/имя
+                - button "✕" [ref=f4e113] [cursor=pointer]
+              - listitem [ref=f4e114]:
+                - button "term Lunyu Термин/имя" [ref=f4e115] [cursor=pointer]:
+                  - generic [ref=f4e116]:
+                    - generic [ref=f4e117]: term
+                    - generic [ref=f4e118]: Lunyu
+                  - generic [ref=f4e119]: Термин/имя
+                - button "✕" [ref=f4e120] [cursor=pointer]
+              - listitem [ref=f4e121]:
+                - button "term Four Books Термин/имя" [ref=f4e122] [cursor=pointer]:
+                  - generic [ref=f4e123]:
+                    - generic [ref=f4e124]: term
+                    - generic [ref=f4e125]: Four Books
+                  - generic [ref=f4e126]: Термин/имя
+                - button "✕" [ref=f4e127] [cursor=pointer]
+              - listitem [ref=f4e128]:
+                - button "term Confucianism Термин/имя" [ref=f4e129] [cursor=pointer]:
+                  - generic [ref=f4e130]:
+                    - generic [ref=f4e131]: term
+                    - generic [ref=f4e132]: Confucianism
+                  - generic [ref=f4e133]: Термин/имя
+                - button "✕" [ref=f4e134] [cursor=pointer]
+              - listitem [ref=f4e135]:
+                - button "term Confucius Термин/имя" [ref=f4e136] [cursor=pointer]:
+                  - generic [ref=f4e137]:
+                    - generic [ref=f4e138]: term
+                    - generic [ref=f4e139]: Confucius
+                  - generic [ref=f4e140]: Термин/имя
+                - button "✕" [ref=f4e141] [cursor=pointer]
+              - listitem [ref=f4e142]:
+                - button "fact 479 BC Дата/год" [ref=f4e143] [cursor=pointer]:
+                  - generic [ref=f4e144]:
+                    - generic [ref=f4e145]: fact
+                    - generic [ref=f4e146]: 479 BC
+                  - generic [ref=f4e147]: Дата/год
+                - button "✕" [ref=f4e148] [cursor=pointer]
+          - generic [ref=f4e149]:
+            - heading "My notes" [level=2] [ref=f4e150]
+            - paragraph [ref=f4e151]: Notes are stored locally in your browser
+            - textbox [ref=f4e152]
+  - contentinfo [ref=f4e153]:
+    - generic [ref=f4e154]:
+      - text: Shunde Tutor · FastAPI + React · works offline in degraded mode
+      - generic [ref=f4e155]: "· LLM: off · search: wikipedia, duckduckgo, mojeek, bing_html"

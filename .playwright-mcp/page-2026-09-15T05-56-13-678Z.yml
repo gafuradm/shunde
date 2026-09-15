@@ -1,0 +1,91 @@
+- generic [ref=f2e3]:
+  - banner [ref=f2e4]:
+    - generic [ref=f2e5]:
+      - link "顺德 Shunde Tutor" [ref=f2e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f2e7]: 顺德
+        - generic [ref=f2e8]: Shunde Tutor
+      - navigation [ref=f2e9]:
+        - link "Главная" [ref=f2e10] [cursor=pointer]:
+          - /url: /
+        - link "Документы" [ref=f2e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Лекции" [ref=f2e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f2e13]:
+        - generic [ref=f2e14]: degraded
+        - generic [ref=f2e15]:
+          - button "RU" [ref=f2e16] [cursor=pointer]
+          - button "EN" [ref=f2e17] [cursor=pointer]
+          - button "中文" [ref=f2e18] [cursor=pointer]
+        - button "Преподаватель ✓" [ref=f2e20] [cursor=pointer]
+  - main [ref=f2e21]:
+    - generic [ref=f2e22]:
+      - generic [ref=f2e23]:
+        - heading "Документы" [level=1] [ref=f2e24]
+        - textbox "Фильтр по названию" [ref=f2e25]
+        - button "↻" [ref=f2e26] [cursor=pointer]
+      - generic [ref=f2e27]:
+        - heading "Загрузить документ" [level=2] [ref=f2e28]
+        - paragraph [ref=f2e29]: PDF, DOCX, PPTX, XLSX, EPUB, ODT, RTF, HTML, TXT, изображения…
+        - generic [ref=f2e30]:
+          - button "Choose File" [ref=f2e31]
+          - textbox "Название (необязательно)" [ref=f2e32]
+          - button "Загрузить документ" [disabled] [ref=f2e33]
+        - generic [ref=f2e34]:
+          - generic [ref=f2e35]:
+            - checkbox "Сразу разметить с помощью ИИ" [checked] [ref=f2e36]
+            - text: Сразу разметить с помощью ИИ
+          - generic [ref=f2e37]:
+            - button "Быстро" [ref=f2e38] [cursor=pointer]
+            - button "Глубоко" [ref=f2e39] [cursor=pointer]
+      - table [ref=f2e42]:
+        - rowgroup [ref=f2e43]:
+          - row [ref=f2e44]:
+            - columnheader "Название" [ref=f2e45]
+            - columnheader "Язык" [ref=f2e46]
+            - columnheader "Символов" [ref=f2e47]
+            - columnheader "Разметка" [ref=f2e48]
+            - columnheader "Статус" [ref=f2e49]
+            - columnheader [ref=f2e50]
+        - rowgroup [ref=f2e51]:
+          - row [ref=f2e52]:
+            - cell "论语 学而 wenyan.txt" [ref=f2e53]:
+              - link "论语 学而" [ref=f2e54] [cursor=pointer]:
+                - /url: /documents/doc_70dda3cb93fc
+              - generic [ref=f2e55]: wenyan.txt
+            - cell "zh-classicalвэньянь" [ref=f2e56]
+            - cell "325" [ref=f2e57]
+            - cell "13" [ref=f2e58]
+            - cell "annotated" [ref=f2e59]
+            - cell [ref=f2e60]:
+              - generic [ref=f2e61]:
+                - link "Открыть" [ref=f2e62] [cursor=pointer]:
+                  - /url: /documents/doc_70dda3cb93fc
+                - button "Быстро" [ref=f2e63] [cursor=pointer]
+                - button "Глубоко" [ref=f2e64] [cursor=pointer]
+                - link "MD" [ref=f2e65] [cursor=pointer]:
+                  - /url: /api/documents/doc_70dda3cb93fc/export
+                - button "Удалить" [ref=f2e66] [cursor=pointer]
+          - row [ref=f2e67]:
+            - cell "论语 学而 wenyan.txt" [ref=f2e68]:
+              - link "论语 学而" [ref=f2e69] [cursor=pointer]:
+                - /url: /documents/doc_4db3ccaab000
+              - generic [ref=f2e70]: wenyan.txt
+            - cell "en" [ref=f2e71]
+            - cell "325" [ref=f2e72]
+            - cell "0" [ref=f2e73]
+            - cell "extracted" [ref=f2e74]
+            - cell [ref=f2e75]:
+              - generic [ref=f2e76]:
+                - link "Открыть" [ref=f2e77] [cursor=pointer]:
+                  - /url: /documents/doc_4db3ccaab000
+                - button "Быстро" [ref=f2e78] [cursor=pointer]
+                - button "Глубоко" [ref=f2e79] [cursor=pointer]
+                - link "MD" [ref=f2e80] [cursor=pointer]:
+                  - /url: /api/documents/doc_4db3ccaab000/export
+                - button "Удалить" [ref=f2e81] [cursor=pointer]
+  - contentinfo [ref=f2e82]:
+    - generic [ref=f2e83]:
+      - text: Shunde Tutor · FastAPI + React · работает офлайн в деградированном режиме
+      - generic [ref=f2e84]: "· LLM: off · search: wikipedia, duckduckgo, mojeek, bing_html"

@@ -1,0 +1,79 @@
+# ============================================================================
+#  Blueprint для Render (https://render.com) — бесплатный тариф `free`.
+#
+#  Как задеплоить:
+#    1. Залейте репозиторий на GitHub.
+#    2. Render → New → Blueprint → выберите репозиторий.
+#    3. Впишите значения секретов (LLM_API_KEY и др.) — они помечены sync: false.
+#
+#  Важно про бесплатный тариф: файловая система эфемерная — база и загруженные
+#  документы сбрасываются при каждом деплое/рестарте. Для курсовой демонстрации
+#  это нормально; для постоянного хранения см. DEPLOY.md (платный диск или внешняя БД).
+# ============================================================================
+
+services:
+  - type: web
+    name: shunde-tutor
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      # --- общие ---
+      - key: APP_NAME
+        value: Shunde Tutor
+      - key: DATA_DIR
+        value: /data
+      - key: MAX_UPLOAD_MB
+        value: "40"
+      # Токен преподавателя генерируется автоматически — посмотрите его в дашборде.
+      - key: TEACHER_TOKEN
+        generateValue: true
+      # Разрешаем обращения с любого домена: у бесплатного Render адрес вида
+      # https://shunde-tutor.onrender.com, но он может меняться.
+      - key: CORS_ORIGINS
+        value: "*"
+
+      # --- LLM (OpenAI-совместимый, DeepSeek) ---
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        value: https://api.deepseek.com/v1
+      - key: LLM_MODEL
+        value: deepseek-v4-pro
+      - key: LLM_MODEL_FAST
+        value: deepseek-flash
+      - key: LLM_TEMPERATURE
+        value: "0.2"
+      - key: LLM_TIMEOUT
+        value: "120"
+      - key: LLM_JSON_MODE
+        value: "true"
+      - key: LLM_VISION
+        value: "false"
+      - key: LLM_DISABLE_THINKING
+        value: "true"
+
+      # --- веб-поиск для объяснений (необязательно, есть бесплатные источники) ---
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: SERPER_API_KEY
+        sync: false
+      - key: BING_SEARCH_KEY
+        sync: false
+      - key: SEARCH_PAGES
+        value: "2"
+      - key: SEARCH_DNS_GUARD
+        value: "false"
+      - key: ALLOW_GOOGLE_FREE_TRANSLATE
+        value: "true"
+
+      # --- серверное распознавание речи (необязательно) ---
+      - key: ASR_API_KEY
+        sync: false
+      - key: ASR_BASE_URL
+        value: https://api.openai.com/v1
+      - key: ASR_MODEL
+        value: whisper-1

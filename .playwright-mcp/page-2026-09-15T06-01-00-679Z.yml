@@ -1,0 +1,68 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "顺德 Shunde Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: 顺德
+        - generic [ref=e8]: Shunde Tutor
+      - navigation [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - button "RU" [ref=e15] [cursor=pointer]
+          - button "EN" [ref=e16] [cursor=pointer]
+          - button "中文" [ref=e17] [cursor=pointer]
+        - button "Teacher ✓" [ref=e19] [cursor=pointer]
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - heading "Connecting…" [level=1] [ref=e25]
+            - generic [ref=e26]: live
+          - generic [ref=e27]:
+            - generic [ref=e28]: TXWESK
+            - generic [ref=e29]: Student
+            - generic [ref=e30]: "Students: 0"
+            - generic [ref=e31]: Connected
+            - generic [ref=e32]: zh-classical → en
+        - generic [ref=e33]:
+          - button "Copy link" [ref=e34] [cursor=pointer]
+          - link "SRT" [ref=e35] [cursor=pointer]:
+            - /url: /api/lectures/TXWESK/export/srt
+          - link "Markdown" [ref=e36] [cursor=pointer]:
+            - /url: /api/lectures/TXWESK/export/markdown
+          - link "Back" [ref=e37] [cursor=pointer]:
+            - /url: /lectures
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - heading "Subtitles" [level=2] [ref=e41]
+          - paragraph [ref=e43]: Nobody has spoken yet
+          - generic [ref=e44]:
+            - button "Translate selection" [disabled] [ref=e45]
+            - generic [ref=e46]:
+              - text: "Translate to:"
+              - combobox "Translate to:" [ref=e47]:
+                - option "English" [selected]
+                - option "Русский"
+                - option "中文"
+            - generic [ref=e48]: Select text in the subtitles and press “Translate selection”
+        - complementary [ref=e49]:
+          - generic [ref=e50]:
+            - heading "Audio relay" [level=2] [ref=e51]
+            - generic [ref=e53]:
+              - button "Turn audio on" [ref=e54] [cursor=pointer]
+              - generic [ref=e55]: Waiting for audio from the teacher…
+          - generic [ref=e56]:
+            - heading "My translation" [level=2] [ref=e57]
+            - paragraph [ref=e58]: Select text in the subtitles and press “Translate selection”
+          - generic [ref=e59]:
+            - heading "Participants" [level=2] [ref=e60]
+            - paragraph [ref=e61]: "Students: 0 · Teacher: 0"
+  - contentinfo [ref=e62]:
+    - generic [ref=e63]: Shunde Tutor · FastAPI + React · works offline in degraded mode

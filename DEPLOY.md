@@ -1,0 +1,115 @@
+# Деплой Shunde Tutor
+
+Приложение собрано так, что **и API, и SPA живут на одном порту**: FastAPI отдаёт
+`/api/*`, `/ws/*` и статику из `frontend/dist`. Поэтому для хостинга достаточно
+одного контейнера — никаких отдельных фронтенд-хостингов не нужно.
+
+- [`Dockerfile`](Dockerfile:1) — двухэтапная сборка (Node собирает SPA → Python-рантайм).
+- [`.dockerignore`](.dockerignore:1) — исключает `.env`, `node_modules`, `backend/data`.
+- [`render.yaml`](render.yaml:1) — готовый Blueprint для Render (тариф `free`).
+
+---
+
+## Вариант 1. Мгновенно и без регистрации — Cloudflare Quick Tunnel
+
+Даёт публичный `https://<случайное-имя>.trycloudflare.com`, доступный с телефона,
+планшета и из любой сети. Аккаунт не нужен, WebSocket он проксирует — живые
+лекции работают. Минус: адрес живёт, пока запущен процесс на этом компьютере.
+
+```bash
+./scripts/public-link.sh
+```
+
+Скрипт сам соберёт фронтенд, поднимет бэкенд на 8000 и опубликует его наружу.
+Ссылка появится в выводе (строка `https://....trycloudflare.com`).
+
+Вручную то же самое:
+
+```bash
+cd frontend && npm run build && cd ..
+cd backend && .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+cloudflared tunnel --url http://127.0.0.1:8000
+```
+
+Аналог без Cloudflare — `ngrok http 8000`.
+
+---
+
+## Вариант 2. Постоянный бесплатный хостинг — Render
+
+Бесплатный тариф Render тянет WebSocket и SSE (это критично для живых лекций
+и для стрима объяснений), умеет собирать [`Dockerfile`](Dockerfile:1) и не требует
+банковской карты.
+
+1. Создайте пустой репозиторий на GitHub и залейте туда проект
+   (папка должна быть git-репозиторием, `.env` уже в [`.gitignore`](.gitignore:1)).
+2. На [render.com](https://render.com) → **New → Blueprint** → выберите репозиторий.
+   Render прочитает [`render.yaml`](render.yaml:1) и создаст сервис `shunde-tutor`.
+3. Впишите секреты, помеченные `sync: false`: как минимум `LLM_API_KEY`
+   (остальное — по желанию). `TEACHER_TOKEN` Render сгенерирует сам — посмотрите
+   его в **Environment** и введите на странице курса как токен преподавателя.
+4. Дождитесь сборки: `https://<имя-сервиса>.onrender.com`.
+
+Особенности бесплатного тарифа:
+
+| Что | Как ведёт себя |
+|---|---|
+| Простой | Сервис засыпает через ~15 мин без запросов, первый запрос после сна — 30–60 с. |
+| Файловая система | **Эфемерная**: `backend/data` (SQLite + загрузки) обнуляется при каждом деплое и рестарте. |
+| RAM | 512 МБ — для разметки и живых лекций достаточно. |
+| Хранение данных | Чтобы документы не пропадали, нужен платный диск (`disk:` в `render.yaml`) или внешняя БД (Postgres + правка [`backend/app/db.py`](backend/app/db.py:1)). |
+
+---
+
+## Вариант 3. Другие платформы (Docker-образ переносим как есть)
+
+- **Hugging Face Spaces** (Docker, бесплатно, без карты): создайте Space → SDK
+  `Docker`, залейте проект, в `README.md` Space укажите `app_port: 8000`,
+  секреты — в *Settings → Variables and secrets*.
+- **Fly.io** (`flyctl launch --dockerfile Dockerfile`, затем `flyctl secrets set`):
+  нужен `[http_service] internal_port = 8000`; карта требуется для верификации.
+- **Koyeb**, **Railway**, **Zeabur** — тот же Dockerfile, порт берётся из `$PORT`.
+
+Порт нигде не зашит: [`Dockerfile`](Dockerfile:1) запускает
+`uvicorn --host 0.0.0.0 --port ${PORT:-8000}`, а `--proxy-headers` нужен, чтобы
+FastAPI видел схему `https` за прокси хостинга.
+
+---
+
+## Обязательные переменные окружения
+
+Значения — те же, что в [`backend/.env.example`](backend/.env.example:1); локальный
+[`backend/.env`](backend/.env:1) на хостинг **не** попадает (он в `.dockerignore`).
+
+| Переменная | Обязательно | Значение для деплоя |
+|---|---|---|
+| `LLM_API_KEY` | да | ключ DeepSeek (без него нет разметки и перевода) |
+| `TEACHER_TOKEN` | да | секрет преподавателя; на Render — `generateValue: true` |
+| `DATA_DIR` | нет | `/data` (путь внутри контейнера) |
+| `CORS_ORIGINS` | нет | `*` либо точный домен, например `https://shunde-tutor.onrender.com` |
+| `LLM_BASE_URL` | нет | `https://api.deepseek.com/v1` |
+| `LLM_MODEL` / `LLM_MODEL_FAST` | нет | `deepseek-v4-pro` / `deepseek-flash` |
+| `LLM_DISABLE_THINKING` | нет | `true` — мгновенный перевод речи без «размышлений» |
+| `TAVILY_API_KEY`, `SERPER_API_KEY`, `BING_SEARCH_KEY` | нет | платные поисковики; без них работают бесплатные источники |
+| `ASR_API_KEY` | нет | серверное распознавание речи (иначе — Web Speech в браузере) |
+
+Проверка после деплоя:
+
+```bash
+curl -s https://<ваш-домен>/api/health
+```
+
+В ответе `features.llm` должно быть `true`, `features.web_search` — список
+доступных источников.
+
+---
+
+## Локальная проверка «как в контейнере»
+
+Docker локально не требуется — можно смоделировать окружение хостинга:
+
+```bash
+cd frontend && npm run build && cd ..
+DATA_DIR=/tmp/shunde-deploy PORT=8000 \
+  backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --proxy-headers
+```

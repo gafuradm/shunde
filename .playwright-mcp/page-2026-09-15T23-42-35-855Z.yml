@@ -1,0 +1,350 @@
+- generic [ref=f5e3]:
+  - banner [ref=f5e4]:
+    - generic [ref=f5e5]:
+      - link "顺德 Shunde Tutor" [ref=f5e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f5e7]: 顺德
+        - generic [ref=f5e8]: Shunde Tutor
+      - navigation [ref=f5e9]:
+        - link "Home" [ref=f5e10] [cursor=pointer]:
+          - /url: /
+        - link "Documents" [ref=f5e11] [cursor=pointer]:
+          - /url: /documents
+        - link "Lectures" [ref=f5e12] [cursor=pointer]:
+          - /url: /lectures
+      - generic [ref=f5e13]:
+        - generic [ref=f5e14]:
+          - button "RU" [ref=f5e15] [cursor=pointer]
+          - button "EN" [ref=f5e16] [cursor=pointer]
+          - button "中文" [ref=f5e17] [cursor=pointer]
+        - button "Teacher ✓" [ref=f5e19] [cursor=pointer]
+  - main [ref=f5e20]:
+    - generic [ref=f5e21]:
+      - generic [ref=f5e22]:
+        - link "← Back to documents" [ref=f5e23] [cursor=pointer]:
+          - /url: /documents
+        - heading "论语 学而" [level=1] [ref=f5e24]
+        - generic [ref=f5e25]: zh-classical
+        - generic [ref=f5e26]: classical
+        - generic [ref=f5e27]: annotated
+        - generic [ref=f5e28]:
+          - button "Collapse panel" [ref=f5e29] [cursor=pointer]
+          - link "Download Markdown" [ref=f5e30] [cursor=pointer]:
+            - /url: /api/documents/doc_70dda3cb93fc/export
+      - generic [ref=f5e31]:
+        - generic [ref=f5e32]: "AI markup:"
+        - button "Quick" [ref=f5e33] [cursor=pointer]
+        - button "Deep" [ref=f5e34] [cursor=pointer]
+        - button "Clear AI markup" [ref=f5e35] [cursor=pointer]
+        - generic [ref=f5e37]:
+          - checkbox "Manual markup" [ref=f5e38]
+          - text: Manual markup
+        - generic [ref=f5e39]: Select text with the mouse and pick a kind
+      - generic [ref=f5e40]:
+        - generic [ref=f5e41]: 论语·学而 子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？」 曾子曰：「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」 子曰：「温故而知新，可以为师矣。」 The Analects (Lunyu) is one of the Four Books of Confucianism. It was compiled by the disciples of Confucius around the 5th century BCE. Confucius (551–479 BCE) was a Chinese philosopher of the Spring and Autumn period.
+        - complementary [ref=f5e43]:
+          - generic [ref=f5e44]:
+            - generic [ref=f5e45]:
+              - heading "Legend" [level=2] [ref=f5e46]
+              - generic [ref=f5e47]: 32 / Markup
+            - generic [ref=f5e48]:
+              - generic [ref=f5e49]: concept
+              - generic [ref=f5e50]: term
+              - generic [ref=f5e51]: fact
+              - generic [ref=f5e52]: unclear
+              - generic [ref=f5e53]: allusion
+              - generic [ref=f5e54]: grammar
+              - generic [ref=f5e55]: emphasis
+            - list [ref=f5e56]:
+              - listitem [ref=f5e57]:
+                - button "term 学而 篇名" [ref=f5e58] [cursor=pointer]:
+                  - generic [ref=f5e59]:
+                    - generic [ref=f5e60]: term
+                    - generic [ref=f5e61]: 学而
+                  - generic [ref=f5e62]: 篇名
+                - button "✕" [ref=f5e63] [cursor=pointer]
+              - listitem [ref=f5e64]:
+                - button "term 子曰 “子”的尊称" [ref=f5e65] [cursor=pointer]:
+                  - generic [ref=f5e66]:
+                    - generic [ref=f5e67]: term
+                    - generic [ref=f5e68]: 子曰
+                  - generic [ref=f5e69]: “子”的尊称
+                - button "✕" [ref=f5e70] [cursor=pointer]
+              - listitem [ref=f5e71]:
+                - button "concept 学而时习 成语" [ref=f5e72] [cursor=pointer]:
+                  - generic [ref=f5e73]:
+                    - generic [ref=f5e74]: concept
+                    - generic [ref=f5e75]: 学而时习
+                  - generic [ref=f5e76]: 成语
+                - button "✕" [ref=f5e77] [cursor=pointer]
+              - listitem [ref=f5e78]:
+                - button "concept 学而时习之 学习与实践" [ref=f5e79] [cursor=pointer]:
+                  - generic [ref=f5e80]:
+                    - generic [ref=f5e81]: concept
+                    - generic [ref=f5e82]: 学而时习之
+                  - generic [ref=f5e83]: 学习与实践
+                - button "✕" [ref=f5e84] [cursor=pointer]
+              - listitem [ref=f5e85]:
+                - button "grammar 不亦 文言虚词/句式" [ref=f5e86] [cursor=pointer]:
+                  - generic [ref=f5e87]:
+                    - generic [ref=f5e88]: grammar
+                    - generic [ref=f5e89]: 不亦
+                  - generic [ref=f5e90]: 文言虚词/句式
+                - button "✕" [ref=f5e91] [cursor=pointer]
+              - listitem [ref=f5e92]:
+                - button "grammar 不亦说乎 通假字“说”" [ref=f5e93] [cursor=pointer]:
+                  - generic [ref=f5e94]:
+                    - generic [ref=f5e95]: grammar
+                    - generic [ref=f5e96]: 不亦说乎
+                  - generic [ref=f5e97]: 通假字“说”
+                - button "✕" [ref=f5e98] [cursor=pointer]
+              - listitem [ref=f5e99]:
+                - button "allusion 有朋自远方来 同门曰朋" [ref=f5e100] [cursor=pointer]:
+                  - generic [ref=f5e101]:
+                    - generic [ref=f5e102]: allusion
+                    - generic [ref=f5e103]: 有朋自远方来
+                  - generic [ref=f5e104]: 同门曰朋
+                - button "✕" [ref=f5e105] [cursor=pointer]
+              - listitem [ref=f5e106]:
+                - button "grammar 不亦 文言虚词/句式" [ref=f5e107] [cursor=pointer]:
+                  - generic [ref=f5e108]:
+                    - generic [ref=f5e109]: grammar
+                    - generic [ref=f5e110]: 不亦
+                  - generic [ref=f5e111]: 文言虚词/句式
+                - button "✕" [ref=f5e112] [cursor=pointer]
+              - listitem [ref=f5e113]:
+                - button "grammar 不亦乐乎 “乐”的读音与含义" [ref=f5e114] [cursor=pointer]:
+                  - generic [ref=f5e115]:
+                    - generic [ref=f5e116]: grammar
+                    - generic [ref=f5e117]: 不亦乐乎
+                  - generic [ref=f5e118]: “乐”的读音与含义
+                - button "✕" [ref=f5e119] [cursor=pointer]
+              - listitem [ref=f5e120]:
+                - button "concept 人不知而 成语" [ref=f5e121] [cursor=pointer]:
+                  - generic [ref=f5e122]:
+                    - generic [ref=f5e123]: concept
+                    - generic [ref=f5e124]: 人不知而
+                  - generic [ref=f5e125]: 成语
+                - button "✕" [ref=f5e126] [cursor=pointer]
+              - listitem [ref=f5e127]:
+                - button "concept 人不知而不愠 君子之德" [ref=f5e128] [cursor=pointer]:
+                  - generic [ref=f5e129]:
+                    - generic [ref=f5e130]: concept
+                    - generic [ref=f5e131]: 人不知而不愠
+                  - generic [ref=f5e132]: 君子之德
+                - button "✕" [ref=f5e133] [cursor=pointer]
+              - listitem [ref=f5e134]:
+                - button "grammar 不亦 文言虚词/句式" [ref=f5e135] [cursor=pointer]:
+                  - generic [ref=f5e136]:
+                    - generic [ref=f5e137]: grammar
+                    - generic [ref=f5e138]: 不亦
+                  - generic [ref=f5e139]: 文言虚词/句式
+                - button "✕" [ref=f5e140] [cursor=pointer]
+              - listitem [ref=f5e141]:
+                - button "concept 不亦君子乎 君子" [ref=f5e142] [cursor=pointer]:
+                  - generic [ref=f5e143]:
+                    - generic [ref=f5e144]: concept
+                    - generic [ref=f5e145]: 不亦君子乎
+                  - generic [ref=f5e146]: 君子
+                - button "✕" [ref=f5e147] [cursor=pointer]
+              - listitem [ref=f5e148]:
+                - button "term 「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」 Quotation" [ref=f5e149] [cursor=pointer]:
+                  - generic [ref=f5e150]:
+                    - generic [ref=f5e151]: term
+                    - generic [ref=f5e152]: 「吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？」
+                  - generic [ref=f5e153]: Quotation
+                - button "✕" [ref=f5e154] [cursor=pointer]
+              - listitem [ref=f5e155]:
+                - button "grammar 吾日三省吾身 日、三、省" [ref=f5e156] [cursor=pointer]:
+                  - generic [ref=f5e157]:
+                    - generic [ref=f5e158]: grammar
+                    - generic [ref=f5e159]: 吾日三省吾身
+                  - generic [ref=f5e160]: 日、三、省
+                - button "✕" [ref=f5e161] [cursor=pointer]
+              - listitem [ref=f5e162]:
+                - button "concept 为人谋而不忠乎 忠" [ref=f5e163] [cursor=pointer]:
+                  - generic [ref=f5e164]:
+                    - generic [ref=f5e165]: concept
+                    - generic [ref=f5e166]: 为人谋而不忠乎
+                  - generic [ref=f5e167]: 忠
+                - button "✕" [ref=f5e168] [cursor=pointer]
+              - listitem [ref=f5e169]:
+                - button "concept 与朋友交而不信乎 信" [ref=f5e170] [cursor=pointer]:
+                  - generic [ref=f5e171]:
+                    - generic [ref=f5e172]: concept
+                    - generic [ref=f5e173]: 与朋友交而不信乎
+                  - generic [ref=f5e174]: 信
+                - button "✕" [ref=f5e175] [cursor=pointer]
+              - listitem [ref=f5e176]:
+                - button "grammar 传不习乎 传、习" [ref=f5e177] [cursor=pointer]:
+                  - generic [ref=f5e178]:
+                    - generic [ref=f5e179]: grammar
+                    - generic [ref=f5e180]: 传不习乎
+                  - generic [ref=f5e181]: 传、习
+                - button "✕" [ref=f5e182] [cursor=pointer]
+              - listitem [ref=f5e183]:
+                - button "term 「温故而知新，可以为师矣。」 Quotation" [ref=f5e184] [cursor=pointer]:
+                  - generic [ref=f5e185]:
+                    - generic [ref=f5e186]: term
+                    - generic [ref=f5e187]: 「温故而知新，可以为师矣。」
+                  - generic [ref=f5e188]: Quotation
+                - button "✕" [ref=f5e189] [cursor=pointer]
+              - listitem [ref=f5e190]:
+                - button "concept 温故而知新 温故知新" [ref=f5e191] [cursor=pointer]:
+                  - generic [ref=f5e192]:
+                    - generic [ref=f5e193]: concept
+                    - generic [ref=f5e194]: 温故而知新
+                  - generic [ref=f5e195]: 温故知新
+                - button "✕" [ref=f5e196] [cursor=pointer]
+              - listitem [ref=f5e197]:
+                - button "grammar 可以为师矣 可以" [ref=f5e198] [cursor=pointer]:
+                  - generic [ref=f5e199]:
+                    - generic [ref=f5e200]: grammar
+                    - generic [ref=f5e201]: 可以为师矣
+                  - generic [ref=f5e202]: 可以
+                - button "✕" [ref=f5e203] [cursor=pointer]
+              - listitem [ref=f5e204]:
+                - button "term The Analects Term/name" [ref=f5e205] [cursor=pointer]:
+                  - generic [ref=f5e206]:
+                    - generic [ref=f5e207]: term
+                    - generic [ref=f5e208]: The Analects
+                  - generic [ref=f5e209]: Term/name
+                - button "✕" [ref=f5e210] [cursor=pointer]
+              - listitem [ref=f5e211]:
+                - button "term Lunyu Term/name" [ref=f5e212] [cursor=pointer]:
+                  - generic [ref=f5e213]:
+                    - generic [ref=f5e214]: term
+                    - generic [ref=f5e215]: Lunyu
+                  - generic [ref=f5e216]: Term/name
+                - button "✕" [ref=f5e217] [cursor=pointer]
+              - listitem [ref=f5e218]:
+                - button "term Four Books Term/name" [ref=f5e219] [cursor=pointer]:
+                  - generic [ref=f5e220]:
+                    - generic [ref=f5e221]: term
+                    - generic [ref=f5e222]: Four Books
+                  - generic [ref=f5e223]: Term/name
+                - button "✕" [ref=f5e224] [cursor=pointer]
+              - listitem [ref=f5e225]:
+                - button "term Confucianism Term/name" [ref=f5e226] [cursor=pointer]:
+                  - generic [ref=f5e227]:
+                    - generic [ref=f5e228]: term
+                    - generic [ref=f5e229]: Confucianism
+                  - generic [ref=f5e230]: Term/name
+                - button "✕" [ref=f5e231] [cursor=pointer]
+              - listitem [ref=f5e232]:
+                - button "fact compiled by the disciples of Confucius 成书过程" [ref=f5e233] [cursor=pointer]:
+                  - generic [ref=f5e234]:
+                    - generic [ref=f5e235]: fact
+                    - generic [ref=f5e236]: compiled by the disciples of Confucius
+                  - generic [ref=f5e237]: 成书过程
+                - button "✕" [ref=f5e238] [cursor=pointer]
+              - listitem [ref=f5e239]:
+                - button "term Confucius Term/name" [ref=f5e240] [cursor=pointer]:
+                  - generic [ref=f5e241]:
+                    - generic [ref=f5e242]: term
+                    - generic [ref=f5e243]: Confucius
+                  - generic [ref=f5e244]: Term/name
+                - button "✕" [ref=f5e245] [cursor=pointer]
+              - listitem [ref=f5e246]:
+                - button "fact around the 5th century BCE 成书年代" [ref=f5e247] [cursor=pointer]:
+                  - generic [ref=f5e248]:
+                    - generic [ref=f5e249]: fact
+                    - generic [ref=f5e250]: around the 5th century BCE
+                  - generic [ref=f5e251]: 成书年代
+                - button "✕" [ref=f5e252] [cursor=pointer]
+              - listitem [ref=f5e253]:
+                - button "fact 551–479 BCE 孔子生卒年" [ref=f5e254] [cursor=pointer]:
+                  - generic [ref=f5e255]:
+                    - generic [ref=f5e256]: fact
+                    - generic [ref=f5e257]: 551–479 BCE
+                  - generic [ref=f5e258]: 孔子生卒年
+                - button "✕" [ref=f5e259] [cursor=pointer]
+              - listitem [ref=f5e260]:
+                - button "fact 479 BC Date/year" [ref=f5e261] [cursor=pointer]:
+                  - generic [ref=f5e262]:
+                    - generic [ref=f5e263]: fact
+                    - generic [ref=f5e264]: 479 BC
+                  - generic [ref=f5e265]: Date/year
+                - button "✕" [ref=f5e266] [cursor=pointer]
+              - listitem [ref=f5e267]:
+                - button "term Chinese philosopher 哲学家身份" [ref=f5e268] [cursor=pointer]:
+                  - generic [ref=f5e269]:
+                    - generic [ref=f5e270]: term
+                    - generic [ref=f5e271]: Chinese philosopher
+                  - generic [ref=f5e272]: 哲学家身份
+                - button "✕" [ref=f5e273] [cursor=pointer]
+              - listitem [ref=f5e274]:
+                - button "term Spring and Autumn period 春秋时期" [ref=f5e275] [cursor=pointer]:
+                  - generic [ref=f5e276]:
+                    - generic [ref=f5e277]: term
+                    - generic [ref=f5e278]: Spring and Autumn period
+                  - generic [ref=f5e279]: 春秋时期
+                - button "✕" [ref=f5e280] [cursor=pointer]
+          - generic [ref=f5e281]:
+            - heading "Glossary" [level=2] [ref=f5e282]
+            - generic [ref=f5e283]:
+              - generic [ref=f5e284]:
+                - term [ref=f5e285]: compiled by the disciples of Confucius
+                - definition [ref=f5e286]: compiled by Confucius' disciples
+              - generic [ref=f5e287]:
+                - term [ref=f5e288]: around the 5th century BCE
+                - definition [ref=f5e289]: around the 5th century BCE
+              - generic [ref=f5e290]:
+                - term [ref=f5e291]: 551–479 BCE
+                - definition [ref=f5e292]: 551–479 BCE
+              - generic [ref=f5e293]:
+                - term [ref=f5e294]: Chinese philosopher
+                - definition [ref=f5e295]: Chinese philosopher
+              - generic [ref=f5e296]:
+                - term [ref=f5e297]: Spring and Autumn period
+                - definition [ref=f5e298]: Spring and Autumn period
+              - generic [ref=f5e299]:
+                - term [ref=f5e300]: 吾日三省吾身
+                - definition [ref=f5e301]: I daily examine myself on three counts
+              - generic [ref=f5e302]:
+                - term [ref=f5e303]: 为人谋而不忠乎
+                - definition [ref=f5e304]: in acting on behalf of others, did I fail to be loyal (do my utmost)?
+              - generic [ref=f5e305]:
+                - term [ref=f5e306]: 与朋友交而不信乎
+                - definition [ref=f5e307]: in interactions with friends, did I fail to be trustworthy?
+              - generic [ref=f5e308]:
+                - term [ref=f5e309]: 传不习乎
+                - definition [ref=f5e310]: what was passed on to me, have I not practiced/reviewed it?
+              - generic [ref=f5e311]:
+                - term [ref=f5e312]: 温故而知新
+                - definition [ref=f5e313]: review the old to understand the new
+              - generic [ref=f5e314]:
+                - term [ref=f5e315]: 可以为师矣
+                - definition [ref=f5e316]: can thereby become a teacher
+              - generic [ref=f5e317]:
+                - term [ref=f5e318]: 学而
+                - definition [ref=f5e319]: Xue Er (first chapter title)
+              - generic [ref=f5e320]:
+                - term [ref=f5e321]: 子曰
+                - definition [ref=f5e322]: The Master said
+              - generic [ref=f5e323]:
+                - term [ref=f5e324]: 学而时习之
+                - definition [ref=f5e325]: to learn and constantly practice it
+              - generic [ref=f5e326]:
+                - term [ref=f5e327]: 不亦说乎
+                - definition [ref=f5e328]: is it not a joy? (说 = 悦)
+              - generic [ref=f5e329]:
+                - term [ref=f5e330]: 有朋自远方来
+                - definition [ref=f5e331]: to have friends come from afar
+              - generic [ref=f5e332]:
+                - term [ref=f5e333]: 不亦乐乎
+                - definition [ref=f5e334]: is it not delightful?
+              - generic [ref=f5e335]:
+                - term [ref=f5e336]: 人不知而不愠
+                - definition [ref=f5e337]: to remain unresentful when others do not understand him
+              - generic [ref=f5e338]:
+                - term [ref=f5e339]: 不亦君子乎
+                - definition [ref=f5e340]: is he not a man of virtue (junzi)?
+          - generic [ref=f5e341]:
+            - heading "My notes" [level=2] [ref=f5e342]
+            - paragraph [ref=f5e343]: Notes are stored locally in your browser
+            - textbox [ref=f5e344]
+  - contentinfo [ref=f5e345]:
+    - generic [ref=f5e346]:
+      - text: Shunde Tutor · FastAPI + React · works offline in degraded mode
+      - generic [ref=f5e347]: "· LLM: deepseek-v4-pro · search: wikipedia, duckduckgo, mojeek, bing_html"
