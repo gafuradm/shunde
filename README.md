@@ -142,7 +142,8 @@ SPA, поэтому для хостинга достаточно одного к
 
 ```bash
 ./scripts/public-link.sh                                            # публичный https за ~15 с, без регистрации
-backend/.venv/bin/python scripts/smoke_deploy.py https://<адрес>    # проверка снаружи
+backend/.venv/bin/python scripts/smoke_deploy.py https://<адрес>    # снаружи: HTTP, SPA, WS, live-перевод
+backend/.venv/bin/python scripts/smoke_llm.py   https://<адрес>     # снаружи: ИИ-разметка документа и объяснение
 ```
 
 Управление сервисом на Render (сборка, переменные окружения) — через API:
