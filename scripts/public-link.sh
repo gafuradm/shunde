@@ -116,7 +116,12 @@ try_localhost_run() {
   local pid=$!
   local url=""
   for _ in $(seq 1 30); do
-    url="$(tr -d '\000' <"$LR_LOG" | grep -oE 'https://[a-z0-9.-]+\.(lhr\.life|localhost\.run|serveo\.net)' | head -1 || true)"
+    url="$(tr -d '\000' <"$LR_LOG" | grep -oE 'https://[a-z0-9]+\.lhr\.life' | head -1 || true)"
+    if [ -z "$url" ]; then
+      url="$(tr -d '\000' <"$LR_LOG" \
+        | grep -oE 'https://[a-z0-9][a-z0-9.-]*\.(localhost\.run|serveo\.net|localto\.net)' \
+        | grep -v 'https://admin\.' | head -1 || true)"
+    fi
     [ -n "$url" ] && break
     kill -0 "$pid" 2>/dev/null || break
     sleep 1
