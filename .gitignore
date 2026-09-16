@@ -17,3 +17,6 @@ frontend/.vite/
 .DS_Store
 .idea/
 .vscode/
+
+# Артефакты браузерных проверок (Playwright MCP)
+.playwright-mcp/
