@@ -49,6 +49,10 @@ backend/.venv/bin/python scripts/smoke_deploy.py https://<ваш-адрес>
 и для стрима объяснений), умеет собирать [`Dockerfile`](Dockerfile:1) и не требует
 банковской карты.
 
+**Этот проект уже задеплоен так:** репозиторий `gafuradm/shunde` (ветка `main`) →
+сервис `shunde-tutor` → **https://shunde-tutor.onrender.com**
+(`region: singapore`, `plan: free`, `healthCheckPath: /api/health`, `autoDeploy: yes`).
+
 1. Создайте пустой репозиторий на GitHub и залейте туда проект
    (папка должна быть git-репозиторием, `.env` уже в [`.gitignore`](.gitignore:1)).
 2. На [render.com](https://render.com) → **New → Blueprint** → выберите репозиторий.
@@ -57,6 +61,51 @@ backend/.venv/bin/python scripts/smoke_deploy.py https://<ваш-адрес>
    (остальное — по желанию). `TEACHER_TOKEN` Render сгенерирует сам — посмотрите
    его в **Environment** и введите на странице курса как токен преподавателя.
 4. Дождитесь сборки: `https://<имя-сервиса>.onrender.com`.
+
+### Вариант 2б. Через Render API (без кликов в дашборде)
+
+Нужен API-ключ: **Account Settings → API Keys**. Храните его только в переменной
+окружения, в репозиторий не коммитьте.
+
+```bash
+export RENDER_API_KEY=rnd_xxxxxxxx
+OWNER=$(curl -s -H "Authorization: Bearer $RENDER_API_KEY" \
+  "https://api.render.com/v1/owners?limit=1" | python3 -c 'import json,sys;print(json.load(sys.stdin)[0]["owner"]["id"])')
+
+# 1. создать сервис (переменные окружения здесь Render ИГНОРИРУЕТ)
+curl -s -X POST "https://api.render.com/v1/services" \
+  -H "Authorization: Bearer $RENDER_API_KEY" -H "Content-Type: application/json" \
+  -d "{\"type\":\"web_service\",\"name\":\"shunde-tutor\",\"ownerId\":\"$OWNER\",
+       \"repo\":\"https://github.com/<user>/shunde\",\"branch\":\"main\",\"autoDeploy\":\"yes\",
+       \"serviceDetails\":{\"env\":\"docker\",\"plan\":\"free\",\"region\":\"singapore\",
+       \"healthCheckPath\":\"/api/health\",\"dockerfilePath\":\"./Dockerfile\"}}"
+
+# 2. задать переменные окружения (полный список — см. render.yaml)
+curl -s -X PUT "https://api.render.com/v1/services/$SID/env-vars" \
+  -H "Authorization: Bearer $RENDER_API_KEY" -H "Content-Type: application/json" \
+  -d '[{"key":"LLM_API_KEY","value":"sk-..."},{"key":"TEACHER_TOKEN","value":"..."},
+       {"key":"DATA_DIR","value":"/data"},{"key":"CORS_ORIGINS","value":"*"},
+       {"key":"LLM_BASE_URL","value":"https://api.deepseek.com/v1"},
+       {"key":"LLM_MODEL","value":"deepseek-v4-pro"},{"key":"LLM_MODEL_FAST","value":"deepseek-flash"},
+       {"key":"LLM_DISABLE_THINKING","value":"true"}]'
+
+# 3. перезапустить, чтобы переменные применились
+curl -s -X POST "https://api.render.com/v1/services/$SID/deploys" \
+  -H "Authorization: Bearer $RENDER_API_KEY" -H "Content-Type: application/json" \
+  -d '{"clearCache":"do_not_clear"}'
+```
+
+Что важно знать про этот путь (проверено на практике):
+
+| Грабли | Как обойти |
+|---|---|
+| `envVars` внутри `serviceDetails` при `POST /services` **молча игнорируются** | после создания вызвать `PUT /services/{id}/env-vars` |
+| Смена переменных окружения **не** запускает пересборку | явный `POST /services/{id}/deploys` |
+| Первый деплой стартует сам сразу после создания сервиса — и без переменных | не пугайтесь `features.llm: false` в `/api/health` до второго деплоя |
+| Проверить, что `Dockerfile` подхватился | `GET /services/{id}` → `serviceDetails.envSpecificDetails.dockerfilePath` |
+
+Статус деплоя: `GET /services/{id}/deploys?limit=1` → `build_in_progress` →
+`update_in_progress` → `live`.
 
 Особенности бесплатного тарифа:
 

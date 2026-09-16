@@ -150,9 +150,17 @@ backend/.venv/bin/python scripts/smoke_deploy.py https://<адрес>    # пр�
 что адрес отвечает. `smoke_deploy.py` прогоняет health, SPA-маршруты, статику,
 загрузку документа, WebSocket-комнату и сквозной live-перевод.
 
+**Постоянная рабочая копия: <https://shunde-tutor.onrender.com>** — Render,
+тариф `free`, регион singapore, сервис `shunde-tutor` из репозитория
+`gafuradm/shunde` (ветка `main`, `autoDeploy: yes`). Особенность тарифа:
+после ~15 минут простоя сервис засыпает и первый запрос отвечает 30–60 с;
+файловая система эфемерная — `backend/data` (SQLite + загрузки) обнуляется
+при рестарте/деплое.
+
 Постоянный бесплатный хостинг — Render по [`render.yaml`](render.yaml:1)
 (**New → Blueprint**, секреты с `sync: false`), либо любой Docker-хостинг
-(HF Spaces, Fly.io, Koyeb, Railway). Полная инструкция и таблица переменных
+(HF Spaces, Fly.io, Koyeb, Railway). Полная инструкция, вариант через Render API
+(создание сервиса и переменных окружения curl-ом) и таблица переменных
 окружения — в [`DEPLOY.md`](DEPLOY.md:1).
 
 ---
