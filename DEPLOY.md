@@ -10,28 +10,36 @@
 
 ---
 
-## Вариант 1. Мгновенно и без регистрации — Cloudflare Quick Tunnel
-
-Даёт публичный `https://<случайное-имя>.trycloudflare.com`, доступный с телефона,
-планшета и из любой сети. Аккаунт не нужен, WebSocket он проксирует — живые
-лекции работают. Минус: адрес живёт, пока запущен процесс на этом компьютере.
+## Вариант 1. Мгновенно и без регистрации — один скрипт
 
 ```bash
 ./scripts/public-link.sh
 ```
 
-Скрипт сам соберёт фронтенд, поднимет бэкенд на 8000 и опубликует его наружу.
-Ссылка появится в выводе (строка `https://....trycloudflare.com`).
+Скрипт собирает фронтенд, поднимает бэкенд на 8000, открывает туннель и **проверяет,
+что адрес реально отвечает** (`/api/health` → 200), прежде чем его напечатать.
+Адрес сохраняется в `/tmp/shunde_public_url.txt`.
 
-Вручную то же самое:
+Провайдер туннеля выбирается автоматически:
+
+| Провайдер | Адрес | Комментарий |
+|---|---|---|
+| cloudflared Quick Tunnel | `https://<имя>.trycloudflare.com` | если edge доступен из вашей сети |
+| ssh localhost.run | `https://<хеш>.lhr.life` | фолбэк без аккаунта; адрес меняется при переподключении |
+
+Принудительный выбор: `TUNNEL=cloudflared ./scripts/public-link.sh`,
+`TUNNEL=localhost …` или `TUNNEL=ngrok …`.
+
+> **Наблюдение из этой сети:** edge Cloudflare заблокирован локальным прокси/VPN
+> (Clash даёт `TLS handshake with edge error: EOF`, адрес отвечает `530`).
+> Скрипт это распознаёт и сам переключается на localhost.run — он работает.
+
+Полная проверка опубликованного адреса (HTTP, статика, документы, WebSocket,
+сквозной live-перевод):
 
 ```bash
-cd frontend && npm run build && cd ..
-cd backend && .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 &
-cloudflared tunnel --url http://127.0.0.1:8000
+backend/.venv/bin/python scripts/smoke_deploy.py https://<ваш-адрес>
 ```
-
-Аналог без Cloudflare — `ngrok http 8000`.
 
 ---
 
