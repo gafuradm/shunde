@@ -107,6 +107,23 @@ curl -s -X POST "https://api.render.com/v1/services/$SID/deploys" \
 Статус деплоя: `GET /services/{id}/deploys?limit=1` → `build_in_progress` →
 `update_in_progress` → `live`.
 
+Всё это завёрнуто в [`scripts/render-deploy.sh`](scripts/render-deploy.sh:1):
+
+```bash
+export RENDER_API_KEY=rnd_xxxxxxxx
+./scripts/render-deploy.sh status     # сервис + последний деплой
+./scripts/render-deploy.sh env        # переменные (значения замаскированы)
+./scripts/render-deploy.sh sync-env   # перенести backend/.env в Render
+./scripts/render-deploy.sh deploy     # собрать и дождаться live
+```
+
+> **Важно про автодеплой.** У сервиса, созданного через API, стоит
+> `autoDeploy: yes / autoDeployTrigger: commit`, но GitHub-вебхук при этом
+> **не подключён** (Render не получает событие push). Поэтому после `git push`
+> нужно явно выполнить `./scripts/render-deploy.sh deploy` — либо в дашборде
+> Render один раз подключить GitHub-приложение к репозиторию, и тогда пуши
+> начнут собираться сами.
+
 Особенности бесплатного тарифа:
 
 | Что | Как ведёт себя |

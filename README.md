@@ -145,6 +145,15 @@ SPA, поэтому для хостинга достаточно одного к
 backend/.venv/bin/python scripts/smoke_deploy.py https://<адрес>    # проверка снаружи
 ```
 
+Управление сервисом на Render (сборка, переменные окружения) — через API:
+
+```bash
+export RENDER_API_KEY=rnd_xxxxxxxx
+./scripts/render-deploy.sh status      # сервис + последний деплой
+./scripts/render-deploy.sh sync-env    # перенести backend/.env в Render
+./scripts/render-deploy.sh deploy      # пересобрать и дождаться live
+```
+
 `public-link.sh` собирает фронтенд, поднимает бэкенд и открывает туннель
 (cloudflared, при блокировке edge — ssh localhost.run), а затем проверяет,
 что адрес отвечает. `smoke_deploy.py` прогоняет health, SPA-маршруты, статику,
